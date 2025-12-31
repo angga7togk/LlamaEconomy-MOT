@@ -4,7 +4,6 @@ import cn.nukkit.command.CommandMap;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
 import lombok.Getter;
-import lombok.Setter;
 import net.lldv.llamaeconomy.commands.*;
 import net.lldv.llamaeconomy.components.provider.*;
 import net.lldv.llamaeconomy.components.universalclient.UniversalClient;

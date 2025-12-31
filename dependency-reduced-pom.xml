@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.lldv.llamaeconomy</groupId>
   <artifactId>LlamaEconomy</artifactId>
-  <version>1.0.0V3-SNAPSHOT</version>
+  <version>1.0.0</version>
   <build>
     <plugins>
       <plugin>
@@ -22,16 +22,138 @@
   </build>
   <repositories>
     <repository>
-      <id>nukkit-repo</id>
-      <url>https://repo.nukkitx.com/maven-snapshots</url>
+      <id>repo-lanink-cn</id>
+      <url>https://repo.lanink.cn/repository/maven-public/</url>
     </repository>
   </repositories>
   <dependencies>
     <dependency>
       <groupId>cn.nukkit</groupId>
-      <artifactId>nukkit</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <artifactId>Nukkit</artifactId>
+      <version>MOT-SNAPSHOT</version>
       <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>netty-transport-raknet</artifactId>
+          <groupId>org.cloudburstmc.netty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>netty-transport-native-epoll</artifactId>
+          <groupId>io.netty</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>natives</artifactId>
+          <groupId>com.nukkitx</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>common</artifactId>
+          <groupId>org.cloudburstmc.protocol</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>fastutil</artifactId>
+          <groupId>it.unimi.dsi</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>guava</artifactId>
+          <groupId>com.google.guava</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>gson</artifactId>
+          <groupId>com.google.code.gson</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>caffeine</artifactId>
+          <groupId>com.github.ben-manes.caffeine</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snakeyaml</artifactId>
+          <groupId>org.yaml</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snakeyaml-engine</artifactId>
+          <groupId>org.snakeyaml</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jackson-dataformat-toml</artifactId>
+          <groupId>com.fasterxml.jackson.dataformat</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>nimbus-jose-jwt</artifactId>
+          <groupId>com.nimbusds</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>asm</artifactId>
+          <groupId>org.ow2.asm</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j-core</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j-slf4j-impl</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>terminalconsoleappender</artifactId>
+          <groupId>net.minecrell</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jline-terminal-jni</artifactId>
+          <groupId>org.jline</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jline-reader</artifactId>
+          <groupId>org.jline</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snappy</artifactId>
+          <groupId>org.iq80.snappy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>leveldb</artifactId>
+          <groupId>com.hivemc.leveldb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>leveldb-api</artifactId>
+          <groupId>com.hivemc.leveldb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>leveldb-mcpe-jni</artifactId>
+          <groupId>cn.lanink.leveldb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>natives</artifactId>
+          <groupId>net.daporkchop.lib</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>sentry</artifactId>
+          <groupId>io.sentry</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>commons-math3</artifactId>
+          <groupId>org.apache.commons</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>snappy-java</artifactId>
+          <groupId>org.xerial.snappy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>oshi-core</artifactId>
+          <groupId>com.github.oshi</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jose4j</artifactId>
+          <groupId>org.bitbucket.b_c</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>block-state-updater</artifactId>
+          <groupId>org.cloudburstmc</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>ru.nukkit.dblib</groupId>
@@ -42,13 +164,13 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.8</version>
+      <version>1.18.30</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>
